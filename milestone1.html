@@ -37,7 +37,7 @@ o<!DOCTYPE html>
 <p> To ensure our robot could travel in a straight line, we added QRE113 IR line sensors. Before proceeding to writing the code, we tested the sensors and observed the values it outputted depending on the surface the sensors covers. Using this method, we determined the threshold value we wanted to use to differentiate between black and white surfaces.</p>
 <p> We set up the sensors such that they have some clearance from the groun and such that the sensors stradle the white lines that we want the robot to follow. This way, the sensors could detect either the white line’s reflected intensity or the black maze’s intensity. We coded the robot to continue its forward trajectories as long as both sensors detected black (assuming the robot was placed directly above the white line to begin with). As soon as one detected white, we would have the appropriate wheel rotate to readjust its course.</p>
 <p> The code for these adjustments are shown in the image below: </p>
-<img src = "code/Lab1code/mod_blink.JPG" alt="hi" class="inline">
+<img src = "milestone_img/sensor_moves_works.jpg" alt="hi" class="inline">
 <p> Our end solution for the straight line adjustment is to adjust the robot under these conditions:</p>
      &#8226; If both sensors detect white or both detect black, we programmed the robot to go straight. <p></p>
         &#8226; If the left sensor detects black and the right white, we had the robot adjust right until both detect the same color again.<p></p>
