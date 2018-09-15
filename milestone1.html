@@ -35,9 +35,12 @@ o<!DOCTYPE html>
 
 <h3> Line Detection </h3>
 <p> To ensure our robot could travel in a straight line, we added QRE113 IR line sensors. Before proceeding to writing the code, we tested the sensors and observed the values it outputted depending on the surface the sensors covers. Using this method, we determined the threshold value we wanted to use to differentiate between black and white surfaces.</p>
-<p> We set up the sensors such that they have some clearance from the groun and such that the sensors stradle the white lines that we want the robot to follow. This way, the sensors could detect either the white line’s reflected intensity or the black maze’s intensity. We coded the robot to continue its forward trajectories as long as both sensors detected black (assuming the robot was placed directly above the white line to begin with). As soon as one detected white, we would have the appropriate wheel rotate to readjust its course.</p>
+        <p> The sensors were placed on to the front part of the robot, very close to the ground to assure the accurary of the sensor readings. </p>
+        <img src = "milestone_img/IMG_2677.JPG" alt="hi" class="inline">  
+        <p> We set up the sensors such that they have some clearance from the groun and such that the sensors stradle the white lines that we want the robot to follow. This way, the sensors could detect either the white line’s reflected intensity or the black maze’s intensity. We coded the robot to continue its forward trajectories as long as both sensors detected black (assuming the robot was placed directly above the white line to begin with). As soon as one detected white, we would have the appropriate wheel rotate to readjust its course.</p>
 <p> The code for these adjustments are shown in the image below: </p>
 <img src = "milestone_img/sensor_moves_works.jpg" alt="hi" class="inline">
+        
 <p> Our end solution for the straight line adjustment is to adjust the robot under these conditions:</p>
      &#8226; If both sensors detect white or both detect black, we programmed the robot to go straight. <p></p>
         &#8226; If the left sensor detects black and the right white, we had the robot adjust right until both detect the same color again.<p></p>
@@ -48,13 +51,15 @@ o<!DOCTYPE html>
 <p> In order to make the robot turn we needed to have the two sensors detect an intersection and turn. The process we followed in order to accomplish this is as follows:</p>
         &#8226; Once both sensors detect white (intersection), we had the robot begin turning in the appropriate direction<p></p>
         &#8226; While turning, we wanted the robot to continue detecting when the first sensor reaches black, then white again. This will signal the end of the turn and the robot will return to moving straight.<p></p>
+        <p> The code for our program is as such:</p>
+        <img src = "mileston1_img/figure_eight_works.jpg alt="hi" class="inline"> 
         <p>Our encountered many issues before producing a final solution. For one, the robot would often overshoot the intersection, which causes the to miss the line when it turns, causing it to run off track. This issue was resolved by addint a delay into the intersection detection portion of the code which allows the robot to decognize that it is time to turn. Another issue we faced was the issue in which the sensors are displaced too far from the line when the robot turns. This was due to the position of senors on the robot and the tightness of the turn. To resolve this issue, added a short, hard-corded 'move forward' portion to our code to move the robot slightly forward when it reaches an intersection. This allowed for the sensors to sense the next straight line the robot needs to traverse. </p>
         
 
 <h3> Extra Heading </h3>
 
-<img src = "code/Lab1code/mod_blink.JPG" alt="hi" class="inline">      
+     
 
 
-<img src = "code/Lab1code/analog.JPG" alt="hi" class="inline">  
+
 
