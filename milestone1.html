@@ -52,7 +52,7 @@ o<!DOCTYPE html>
         &#8226; Once both sensors detect white (intersection), we had the robot begin turning in the appropriate direction<p></p>
         &#8226; While turning, we wanted the robot to continue detecting when the first sensor reaches black, then white again. This will signal the end of the turn and the robot will return to moving straight.<p></p>
         <p> The code for our program is as such:</p>
-        <img src = "milestone_img/figure_eight_works.jpg alt="hi" class="inline">
+        <img src = "milestone_img/figure_eight_works.jpg" alt="hi" class="inline">                                                                    
                                                                                  
         <p>Our encountered many issues before producing a final solution. For one, the robot would often overshoot the intersection, which causes the to miss the line when it turns, causing it to run off track. This issue was resolved by addint a delay into the intersection detection portion of the code which allows the robot to decognize that it is time to turn. Another issue we faced was the issue in which the sensors are displaced too far from the line when the robot turns. This was due to the position of senors on the robot and the tightness of the turn. To resolve this issue, added a short, hard-corded 'move forward' portion to our code to move the robot slightly forward when it reaches an intersection. This allowed for the sensors to sense the next straight line the robot needs to traverse. </p>
         
