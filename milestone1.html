@@ -34,6 +34,7 @@ o<!DOCTYPE html>
 &#8226; To have the robot traverse the grid in a figure eight.<p> </p>
 
 <h3> Line Detection </h3>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/d6kF6FJvlLk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 <p> To ensure our robot could travel in a straight line, we added QRE113 IR line sensors. Before proceeding to writing the code, we tested the sensors and observed the values it outputted depending on the surface the sensors covers. Using this method, we determined the threshold value we wanted to use to differentiate between black and white surfaces.</p>
         <p> The sensors were placed on to the front part of the robot, very close to the ground to assure the accurary of the sensor readings. </p>
         <img src = "milestone_img/IMG_2677.JPG" alt="hi" class="inline">  
@@ -48,6 +49,7 @@ o<!DOCTYPE html>
 
    
 <h3> Figure Eight </h3>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/G1xp0DfKNp4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 <p> In order to make the robot turn we needed to have the two sensors detect an intersection and turn. The process we followed in order to accomplish this is as follows:</p>
         &#8226; Once both sensors detect white (intersection), we had the robot begin turning in the appropriate direction<p></p>
         &#8226; While turning, we wanted the robot to continue detecting when the first sensor reaches black, then white again. This will signal the end of the turn and the robot will return to moving straight.<p></p>
